@@ -1,8 +1,7 @@
 package model.dto;
 
-import java.util.Objects;
 
-public class AreaConhecimento {
+public class AreaConhecimento implements IEntity{
 	private Integer id;
 	private String nome;
 	
@@ -42,7 +41,12 @@ public class AreaConhecimento {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, nome);
+		if (id != null) {
+			return id;
+		}
+		else {
+			return 0;
+		}
 	}
 	
 }
