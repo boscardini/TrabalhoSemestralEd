@@ -68,14 +68,14 @@ public abstract class GenericArq<T extends IEntity, ID>{
             }
 
            
-            int novoId = getIdByReflection(entidade);
+            int novoId = getEntityId(entidade);
             boolean inserido = false;
 
             Lista<T> novaLista = new Lista<>();
 
             for (int i = 0; i < entidades.size(); i++) {
                 T atual = entidades.get(i);
-                int idAtual = getIdByReflection(atual);
+                int idAtual = getEntityId(atual);
 
                 
                 if (!inserido && novoId < idAtual) {
@@ -103,7 +103,7 @@ public abstract class GenericArq<T extends IEntity, ID>{
     }
 
     
-    private int getIdByReflection(T entidade) throws Exception {
+    private int getEntityId(T entidade) throws Exception {
         try {
             var metodo = entidade.getClass().getMethod("getId");
             Object valor = metodo.invoke(entidade);
