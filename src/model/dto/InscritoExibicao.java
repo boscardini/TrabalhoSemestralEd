@@ -1,6 +1,6 @@
 package model.dto;
 
-public class InscricaoExibicao {
+public class InscritoExibicao {
 	private Integer id;
 	private String cpf;
 	private String nome;
@@ -9,7 +9,7 @@ public class InscricaoExibicao {
 	private String disciplina;
 	private Integer idProcesso;
 	
-	public InscricaoExibicao(Integer id, String cpf, String nome, Float qtdPontos, String area, String disciplina, Integer idProcesso) {
+	public InscritoExibicao(Integer id, String cpf, String nome, Float qtdPontos, String area, String disciplina, Integer idProcesso) {
 		this.id= id;
 		this.cpf= cpf;
 		this.nome= nome;
