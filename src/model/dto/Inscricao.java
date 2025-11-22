@@ -5,13 +5,13 @@ import java.time.LocalDate;
 public class Inscricao implements IEntity {
 	private Integer id;
 	private Integer idProcesso;
-	private Integer idProfessor;
+	private Integer IdProfessor;
 	private LocalDate data;
 	
-	public Inscricao(Integer id,Integer idProcesso, Integer idProfessor, LocalDate data) {
+	public Inscricao(Integer id,Integer idProcesso, Integer IdProfessor, LocalDate data) {
 		this.id= id;
 		this.idProcesso= idProcesso;
-		this.idProfessor= idProfessor;
+		this.IdProfessor= IdProfessor;
 		this.data= data;
 	}
 
@@ -32,11 +32,11 @@ public class Inscricao implements IEntity {
 	}
 
 	public Integer getIdProfessor() {
-		return idProfessor;
+		return IdProfessor;
 	}
 
-	public void setIdProfessor(Integer idProfessor) {
-		this.idProfessor = idProfessor;
+	public void setCpfProfessor(Integer idProfessor) {
+		this.IdProfessor = idProfessor;
 	}
 
 	public LocalDate getData() {
@@ -52,7 +52,7 @@ public class Inscricao implements IEntity {
 
 	@Override
 	public String toString() {
-		return "Inscrição [id=" + id + ", idProcesso=" + idProcesso + ", idProfessor=" + idProfessor + ", data=" + data
+		return "Inscrição [id=" + id + ", idProcesso=" + idProcesso + ", IdProfessor=" + IdProfessor + ", data=" + data
 				+ "]";
 	}
 	

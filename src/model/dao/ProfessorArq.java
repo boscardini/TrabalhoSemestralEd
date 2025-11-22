@@ -34,16 +34,16 @@ public class ProfessorArq extends GenericArq<Professor, Integer> {
             entidade.getCpf() + ';' + 
             entidade.getNome() + ';' + 
             entidade.getQtdPontos() + ";" + 
-            entidade.getIdAreaConhecimento();
+            entidade.getAreaConhecimento();
     }
 
     
     protected Professor csvToEntity(String[] dados) {
         Integer id = Integer.parseInt(dados[0]);
-        String cpf = dados[1];
+        String cpf = ""+ dados[1];
         String nome = dados[2];
         Float qtdPontos = Float.parseFloat(dados[3]);
-        Integer areaID = Integer.parseInt(dados[4]);
+        String areaID = (dados[4]);
         return new Professor(id, cpf, nome, qtdPontos, areaID);
     }
 

@@ -12,15 +12,15 @@ public class CursoArq extends GenericArq<Curso, Integer> {
 
 	
 	public String entityToCSV(Curso entidade) {
-		return entidade.getId() + ";" + entidade.getNome() + ";" + entidade.getIdAreaConhecimento();
+		return entidade.getId() + ";" + entidade.getNome() + ";" + entidade.getAreaConhecimento();
 	}
 
 	
 	protected Curso csvToEntity(String[] dados) {
 		Integer id = Integer.parseInt(dados[0]);
 		String nome = dados[1];
-		Integer idAreaConhecimento = Integer.parseInt(dados[2]);
-		return new Curso(id, nome, idAreaConhecimento);
+		String AreaConhecimento = (dados[2]);
+		return new Curso(id, nome,AreaConhecimento);
 	}
 
 }

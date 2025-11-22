@@ -3,12 +3,12 @@ package model.dto;
 public class Curso implements IEntity{
 	private Integer id;
 	private String nome;
-	private Integer IdAreaConhecimento;
+	private String AreaConhecimento;
 	
-	public Curso(Integer id,String nome, Integer IdAreaConhecimento) {
+	public Curso(Integer id,String nome, String AreaConhecimento) {
 		this.id= id;
 		this.nome= nome;
-		this.IdAreaConhecimento=IdAreaConhecimento;
+		this.AreaConhecimento=AreaConhecimento;
 	}
 
 	public Integer getId() {
@@ -27,12 +27,12 @@ public class Curso implements IEntity{
 		this.nome = nome;
 	}
 
-	public Integer getIdAreaConhecimento() {
-		return IdAreaConhecimento;
+	public String getAreaConhecimento() {
+		return AreaConhecimento;
 	}
 
-	public void setIdAreaConhecimento(Integer IdAreaConhecimento) {
-		this.IdAreaConhecimento = IdAreaConhecimento;
+	public void setIdAreaConhecimento(String AreaConhecimento) {
+		this.AreaConhecimento = AreaConhecimento;
 	}
 
 	@Override

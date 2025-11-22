@@ -5,14 +5,14 @@ public class Professor implements IEntity{
 	private String cpf;
 	private String nome;
 	private Float qtdPontos;
-	private Integer idAreaConhecimento;
+	private String AreaConhecimento;
 	
-	public Professor(Integer id, String cpf, String nome, Float qtdPontos, Integer idAreaConhecimento) {
+	public Professor(Integer id, String cpf, String nome, Float qtdPontos, String AreaConhecimento) {
 		this.id= id;
 		this.cpf= cpf;
 		this.nome=nome;
 		this.qtdPontos= qtdPontos;
-		this.idAreaConhecimento= idAreaConhecimento;
+		this.AreaConhecimento= AreaConhecimento;
 	}
 	public Integer getId() {
 		return id;
@@ -39,11 +39,11 @@ public class Professor implements IEntity{
 		this.qtdPontos = qtdPontos;
 	}
 	
-	public Integer getIdAreaConhecimento() {
-		return idAreaConhecimento;
+	public String getAreaConhecimento() {
+		return AreaConhecimento;
 	}
-	public void setIdAreaConhecimento(Integer idAreaConhecimento) {
-		this.idAreaConhecimento = idAreaConhecimento;
+	public void setIdAreaConhecimento(String AreaConhecimento) {
+		this.AreaConhecimento =AreaConhecimento;
 	}
 	@Override
 	public String toString() {
