@@ -1,6 +1,5 @@
 package controller;
 
-
 import model.dao.InscricaoArq;
 import model.dto.Inscricao;
 import br.edu.fateczl.Lista;

@@ -14,7 +14,7 @@ public class CursoForm extends JDialog {
     private CursoController controller;
 
     public CursoForm(Window owner) throws Exception {
-        super(owner, "CRUD Cursos");
+        super(owner, "Cursos");
         controller = new CursoController();
         initComponents();
         pack();

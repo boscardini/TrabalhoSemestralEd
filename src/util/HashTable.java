@@ -5,17 +5,17 @@ import model.dto.Disciplina;
 
 public class HashTable {
     private Lista<Disciplina>[] table;
-    private int capacity;
+    private int capacidade;
 
   
-    public HashTable(int capacity){
-        this.capacity = capacity;
-        table = new Lista[capacity];
-        for (int i = 0; i < capacity; i++) table[i] = new Lista<>();
+    public HashTable(int capacidade){
+        this.capacidade = capacidade;
+        table = new Lista[capacidade];
+        for (int i = 0; i < capacidade; i++) table[i] = new Lista<>();
     }
 
     private int hash(int key){
-        return Math.abs(key) % capacity;
+        return Math.abs(key) % capacidade;
     }
 
     public void put(int key, Disciplina value) throws Exception{

@@ -13,7 +13,7 @@ public class DisciplinaForm extends JDialog {
     private DisciplinaController controller;
 
     public DisciplinaForm(Window owner) throws Exception {
-        super(owner, "CRUD Disciplinas");
+        super(owner, "Disciplinas");
         controller = new DisciplinaController();
         initComponents();
         pack();

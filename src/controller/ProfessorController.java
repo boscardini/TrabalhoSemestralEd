@@ -1,14 +1,17 @@
 package controller;
 
+import model.dao.InscricaoArq;
 import model.dao.ProfessorArq;
+import model.dto.Inscricao;
 import model.dto.Professor;
 import br.edu.fateczl.Lista;
 
 public class ProfessorController {
     private ProfessorArq professorArq;
-
+    private InscricaoArq inscricaoArq;
     public ProfessorController() throws Exception{
         professorArq = new ProfessorArq();
+        inscricaoArq = new InscricaoArq();
     }
 
     public void inserir(Professor p) throws Exception{
@@ -21,6 +24,15 @@ public class ProfessorController {
 
     public void excluir(Integer id) throws Exception{
         professorArq.excluir(id);
+        Lista<Inscricao> inscricoes = inscricaoArq.getAll();
+
+        for (int i = 0; i < inscricoes.size(); i++) {
+            Inscricao ins = inscricoes.get(i);
+
+            if (ins.getIdProfessor().equals(id)) {
+                inscricaoArq.excluir(ins.getIdProfessor());
+            }
+        }
     }
 
     public Lista<Professor> listarTodos() throws Exception{
@@ -34,6 +46,9 @@ public class ProfessorController {
     public Professor buscarPorCPF(String cpf) throws Exception{
         return professorArq.buscarPorCPF(cpf);
     }
+    
+
+
     public int getNextId() throws Exception {
         Lista<Professor> lista = professorArq.getAll();
         int max = 0;

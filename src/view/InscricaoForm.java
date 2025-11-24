@@ -15,7 +15,7 @@ public class InscricaoForm extends JDialog {
     private InscricaoController controller;
 
     public InscricaoForm(Window owner) throws Exception {
-        super(owner, "CRUD Inscrições");
+        super(owner, "Inscrições");
         controller = new InscricaoController();
         initComponents();
         pack();
